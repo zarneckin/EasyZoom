@@ -195,8 +195,8 @@
         var offset  = this.$target.offset();
         var pt = ly - offset.top;
         var pl = lx - offset.left;
-        var xt = pt * rh;
-        var xl = pl * rw;
+        var xt = Math.floor(pt * rh);
+        var xl = Math.floor(pl * rw);
 
         // Close if outside
         if (xl < 0 || xt < 0 || xl > dw || xt > dh) {
